@@ -30,6 +30,7 @@ header {
                     align-items: center;
                     padding-left: 20px;
                 }
+
                 div {
                     display: flex;
                     justify-content: center;
@@ -73,6 +74,10 @@ header {
                             display: none;
                         }
                     }
+                }
+                a:hover {
+                    font-weight: bolder;
+                    border-bottom: 3px solid $a-menu;
                 }
             }
             .M {
@@ -120,6 +125,10 @@ footer {
             a {
                 color: #ffffff;
                 margin: 0 2rem;
+            }
+            a:hover {
+                font-weight: bolder;
+                border-bottom: 3px solid #ffffff;
             }
         }
         @include pad {
@@ -226,6 +235,11 @@ footer {
             @include mobile {
                 margin: 20px 0;
             }
+            a:hover {
+                font-weight: bolder;
+                color: $primary;
+                text-shadow: 0.5px 0.5px 1px $a-menu;
+            }
         }
         .high {
             img {
@@ -256,7 +270,8 @@ footer {
                 }
             }
             a:hover {
-                background: rgb(0, 0, 0, 0.1);
+                background: rgb(0, 0, 0, 0.15);
+                color: #000000;
             }
         }
     }
@@ -416,6 +431,9 @@ footer {
                 cursor: pointer;
                 border: none;
             }
+            input[type="button"]:hover {
+                background: #704b02;
+            }
         }
     }
 }
@@ -433,6 +451,10 @@ footer {
             padding-right: 28px;
             a {
                 color: #ffffff;
+                font-size: 16px;
+            }
+            a:hover {
+                font-size: 24px;
             }
         }
         @include pad {
@@ -467,6 +489,9 @@ footer {
         }
         .card {
             margin: 0px 10px;
+            a.photo {
+                overflow: hidden;
+            }
             img {
                 width: 230px;
                 height: 230px;
@@ -475,6 +500,9 @@ footer {
                     width: 150px;
                     height: 150px;
                 }
+            }
+            img:hover {
+                transform: scale(1.5);
             }
             .b {
                 object-position: bottom;
@@ -690,6 +718,9 @@ footer {
                 @include pad {
                     width: 50%;
                 }
+            }
+            a:hover {
+                background: #704b02;
             }
         }
         .love {
