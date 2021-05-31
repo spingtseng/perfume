@@ -498,7 +498,7 @@ footer .menu li a {
   font-size: 16px;
   color: #8d8d8d;
   cursor: pointer;
-  box-shadow: none;
+  border: none;
 }
 
 .brands {
