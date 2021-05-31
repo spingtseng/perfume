@@ -498,6 +498,7 @@ footer .menu li a {
   font-size: 16px;
   color: #8d8d8d;
   cursor: pointer;
+  border-style: solid;
 }
 
 .brands {
@@ -669,7 +670,6 @@ footer .menu li a {
 }
 .login .log-in label {
   font-size: 16px;
-  margin: 10px 0;
   font-weight: 800;
 }
 .login .log-in input {
