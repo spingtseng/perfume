@@ -712,4 +712,128 @@ footer .menu li a {
 .login .log-in .link .button .loginbtn {
   background: #916000;
   color: #ffffff;
+}
+
+.product001 {
+  display: flex;
+  max-width: 1024px;
+  margin: 40px auto;
+}
+@media (max-width: 768px) {
+  .product001 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.product001 .photos img {
+  width: 700px;
+  height: 460px;
+}
+@media (max-width: 568px) {
+  .product001 .photos img {
+    width: 345px;
+    height: 225px;
+  }
+}
+.product001 .photos .row {
+  display: flex;
+}
+.product001 .photos .row img {
+  width: 340px;
+  height: 640px;
+  margin: 20px 0;
+}
+.product001 .photos .row .row1 {
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .product001 .photos .photo {
+    display: none;
+  }
+}
+.product001 .info {
+  margin-left: 20px;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .product001 .info {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 568px) {
+  .product001 .info {
+    max-width: 345px;
+  }
+}
+.product001 .info h3 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.product001 .info p {
+  font-size: 20px;
+}
+.product001 .info .link {
+  display: flex;
+  border-radius: 20px;
+}
+.product001 .info .link input {
+  width: 160px;
+  height: 50px;
+  border: 1px solid #916000;
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .product001 .info .link input {
+    width: 45%;
+  }
+}
+.product001 .info .link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: #916000;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
+@media (max-width: 768px) {
+  .product001 .info .link a {
+    width: 50%;
+  }
+}
+.product001 .info .love {
+  margin-bottom: 80px;
+  font-weight: bolder;
+}
+.product001 .info .info {
+  margin: 0;
+}
+.product001 .photo2 {
+  display: none;
+}
+@media (max-width: 768px) {
+  .product001 .photo2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .product001 .photo2 img {
+    width: 345px;
+    height: 640px;
+  }
+  .product001 .photo2 .main {
+    width: 700px;
+    height: 460px;
+  }
+}
+@media (max-width: 568px) {
+  .product001 .photo2 .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
