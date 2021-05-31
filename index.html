@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="./app.js"></script>
+    <title>D'Perfume Offical</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <!-- logo -->
+      <div class="logo">
+        <a href=""> <img src="./image/d’Perfume.png" alt="" /></a>
+        <div class="icon">
+          <a href="">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                fill="#8D8D8D"
+              />
+            </svg>
+          </a>
+          <div onclick="toggleMenu();">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 18 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z"
+                fill="#8D8D8D"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div class="menu" id="menuShow">
+        <ul>
+          <li>
+            <a href="./product.html"
+              ><svg
+                width="18"
+                height="16"
+                viewBox="0 0 18 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 0H1V2H17V0ZM18 10V8L17 3H1L0 8V10H1V16H11V10H15V16H17V10H18ZM9 14H3V10H9V14Z"
+                  fill="#8D8D8D"
+                />
+              </svg>
+              <span>Product</span>
+            </a>
+          </li>
+          <li class="P">
+            <a href="./login.html"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z"
+                  fill="#8D8D8D"
+                />
+              </svg>
+              <span>log in</span>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              ><svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 18.35L8.55 17.03C3.4 12.36 0 9.28 0 5.5C0 2.42 2.42 0 5.5 0C7.24 0 8.91 0.81 10 2.09C11.09 0.81 12.76 0 14.5 0C17.58 0 20 2.42 20 5.5C20 9.28 16.6 12.36 11.45 17.04L10 18.35Z"
+                  fill="#8D8D8D"
+                />
+              </svg>
+              <span>Wishlist</span>
+            </a>
+          </li>
+          <li class="M">
+            <a href="">Contact</a>
+          </li>
+          <li class="M">
+            <a href="">Blog</a>
+          </li>
+          <li class="P">
+            <a href=""
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="cart"
+              >
+                <path
+                  d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                  fill="#8D8D8D"
+                />
+              </svg>
+              <span> Cart(3)</span>
+            </a>
+          </li>
+          <li class="M"><a href="">My Page</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- banner -->
+    <div class="banner">
+      <img src="./image/index1.jpg" alt="" />
+      <div class="info">
+        <h3>Perfume your day</h3>
+        <p>
+          A perfume is like a piece of clothing, a message, a way of presenting
+          oneself a costume that according to the person who wears it.
+        </p>
+        <a href="">Shop now</a>
+      </div>
+    </div>
+    <!-- content -->
+    <div class="content">
+      <div class="card row-re">
+        <div class="photo">
+          <img src="./image/index2.jpg" alt="" srcset="" />
+        </div>
+        <div class="info">
+          <h4>Gabrielle CHANEL</h4>
+          <p>
+            全新嗅覺體驗，花香四溢、明亮馥郁。結合茉莉、依蘭依蘭、橙花和最迷人的格拉斯晚香玉之花香，呈現出夢幻花香氣息。
+            極具女性特質的香奈兒嘉柏麗香水，專為光芒四射的她而生。
+          </p>
+          <a href="">查看更多</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="photo">
+          <img src="./image/index3.png" alt="" srcset="" />
+        </div>
+        <div class="info">
+          <h4>Five O’clock Au Gingembre</h4>
+          <p>
+            生薑與溫醇的肉桂香、紅糖的香甜摻和成一氣，溫暖微辛的氣息反倒形成一股輕煙氤氳開來，還帶點微微煙醺感漫溢在整個鼻息之間，細聞之下,又還有溫溫淡淡的木香，溫和而暖心。
+          </p>
+          <a href="">查看更多</a>
+        </div>
+      </div>
+      <div class="card row-re">
+        <div class="photo">
+          <img src="./image/index4.jpg" alt="" srcset="" />
+        </div>
+        <div class="info">
+          <h4>CHANEL N°5</h4>
+          <p>
+            N°5，女性魅力的極致精髓。散發柔美澄透的乙醛花束香氣。經典傳奇香氛，蘊藏於極簡設計的獨特瓶身。
+          </p>
+          <a href="">查看更多</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="photo high">
+          <img src="./image/index5.jpg" alt="" srcset="" />
+        </div>
+        <div class="info high">
+          <h4>1. <br />Levels of Preventive Maintenance Compliance</h4>
+          <p>
+            The core idea of preventative maintenance is the performance of
+            proactive actions against unscheduled downtime in order to identify
+            potential defects before they evolve into something more severe.
+          </p>
+          <h4>2. <br />Percentage of Planned Maintenance</h4>
+          <p>
+            The planned maintenance percentage is the total planned maintenance
+            time in your CMMS software over a date range over the total number
+            of hours of a service performed by the technicians.
+          </p>
+          <h4>3. <br />Critical percentage of planned maintenance</h4>
+          <p>
+            Calculating the critical percentage of planned maintenance will help
+            you prioritize the most important operations that should be
+            performed immediately.
+          </p>
+          <a href="">Plan a free online training</a>
+        </div>
+      </div>
+    </div>
+    <!-- middle -->
+    <div class="middle">
+      <div class="card">
+        <img src="./image/index6.jpg" alt="" />
+        <h3>Poppy & Barley</h3>
+        <p class="brand">Jo Malone</p>
+        <p>NT$1,380 <span> NT$1,580</span></p>
+      </div>
+      <div class="card">
+        <img src="./image/index7.jpg" alt="" />
+        <h3>Body Wash</h3>
+        <p class="brand">Curology</p>
+        <p>NT$1,580</p>
+      </div>
+      <div class="card soldout">
+        <p class="sold">Sold Out</p>
+        <img src="./image/index8.jpg" alt="" />
+        <h3>Apple Cider Vinegar Capsule</h3>
+        <p class="brand">Tonik</p>
+        <p>NT$1,580</p>
+      </div>
+    </div>
+    <!-- recycling -->
+    <div class="recycling">
+      <img src="./image/index9.jpg" alt="" />
+      <div class="info">
+        <h4>Bottle-Recycling</h4>
+        <p>Recycle your used empty bottles and be rewarded!</p>
+        <p class="small">
+          For the past 10 years, we have collected over 800,000 bottles through
+          Empty Bottle Recycling Campaign and planted more than 860 pine trees
+          for a better environment.For the past 10 years, we have collected over
+          800,000 bottles through Empty Bottle Recycling Campaign and planted
+          more than 860 pine trees for a better environment.
+        </p>
+        <a href="">查看更多</a>
+      </div>
+    </div>
+    <!-- subscribe -->
+    <div class="subscribe">
+      <div class="subscribe">
+        <h4>記得<br />訂閱以獲得更多資訊！</h4>
+        <div class="email">
+          <input type="text" placeholder="Your email address" />
+          <input type="button" value="Subscribe" onclick="location.href='#'" />
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="copyright">
+        <a href="#"> <img src="./image/d’Perfumewhite.png" alt="" /></a>
+        <p>© 2020. All Rights Reserved.</p>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./product.html">Product</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+     <script src="./app.js"></script>
+  </body>
+</html>

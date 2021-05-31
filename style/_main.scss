@@ -1,0 +1,614 @@
+// header
+header {
+    max-width: 900px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icon {
+        display: none;
+    }
+    @include pad {
+        max-width: 700px;
+        margin: 10px auto;
+    }
+    @include mobile {
+        max-width: 400px;
+        flex-direction: column;
+        .logo {
+            width: 95vw;
+            display: flex;
+            justify-content: space-between;
+            .icon {
+                width: 140px;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 10px;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 20px;
+                }
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        @include mobile {
+            display: none;
+        }
+        ul {
+            display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
+            li {
+                padding: 0 1rem;
+                @include mobile {
+                    background-color: #707070;
+                    width: 100vw;
+                    margin: 1px 0;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: #707070;
+                    height: 56px;
+                    svg {
+                        margin: 0.5rem;
+                    }
+                    @include mobile {
+                        color: #ffffff;
+                        justify-content: center;
+                        font-size: 1rem;
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .M {
+                display: none;
+                @include mobile {
+                    display: block;
+                }
+            }
+            .P {
+                display: block;
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// footer
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background: $primary;
+    color: #ffffff;
+    padding: 1rem 0rem;
+    .copyright {
+        display: flex;
+        p {
+            padding: 0rem 2rem;
+            display: flex;
+            align-items: center;
+        }
+        @include pad {
+            p {
+                padding: 0 1rem;
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+        }
+        li {
+            a {
+                color: #ffffff;
+                margin: 0 2rem;
+            }
+        }
+        @include pad {
+            display: none;
+        }
+    }
+}
+
+// banner
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+        height: auto;
+        @include mobile {
+            height: 70vh;
+        }
+    }
+    .info {
+        right: 10rem;
+        position: absolute;
+        z-index: 1;
+        max-width: 450px;
+        color: #ffffff;
+        @include pad {
+            right: 5rem;
+        }
+        @include mobile {
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h3 {
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 0.5px 0.5px #333;
+            @include mobile {
+                font-size: 32px;
+            }
+        }
+        p {
+            font-size: 24px;
+            line-height: 30px;
+            text-shadow: 0.75px 0.75px #333;
+            margin: 15px 0;
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        a {
+            width: 345px;
+            height: 60px;
+            background: none;
+            border: 2px solid #ffffff;
+            border-radius: 50px;
+            color: white;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover {
+            background: rgb(255, 255, 255, 0.3);
+        }
+    }
+}
+
+// content
+.content {
+    max-width: 1110px;
+    margin: 10px auto;
+    @include desktop-below {
+        max-width: 900px;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include pad {
+            margin: 0 30px;
+        }
+        .photo {
+            img {
+                width: 555px;
+                height: 555px;
+                @include desktop-below {
+                    width: 345px;
+                    height: 345px;
+                }
+            }
+        }
+        .info {
+            @include desktop-below {
+                max-width: 20rem;
+                margin: 0 15px;
+            }
+            @include mobile {
+                margin: 20px 0;
+            }
+        }
+        .high {
+            img {
+                height: 1080px;
+                @include mobile {
+                    height: 90vh;
+                }
+            }
+            h4 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 52px;
+            }
+            a {
+                border: 2px solid #000000;
+                width: 350px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000000;
+                font-size: 20px;
+                border-radius: 50px;
+                @include mobile {
+                    width: 300px;
+                }
+            }
+            a:hover {
+                background: rgb(0, 0, 0, 0.1);
+            }
+        }
+    }
+    .row-re {
+        flex-direction: row-reverse;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+// middle
+.middle {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include pad {
+        flex-wrap: wrap;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 1024px;
+        margin: 40px;
+        img {
+            width: 350px;
+            height: 540px;
+            @include pad {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        h3 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+
+            span {
+                margin: 0 10px;
+                color: $a-menu;
+                text-decoration: line-through;
+            }
+        }
+    }
+    .soldout {
+        position: relative;
+
+        .sold {
+            z-index: 1;
+            top: center;
+            position: absolute;
+            color: #ffffff;
+            width: 100%;
+            height: 540px;
+            background: rgb(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            @include pad {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        img {
+            z-index: -1;
+        }
+    }
+}
+
+// recycling
+.recycling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    margin: 20px auto;
+    @include pad {
+        flex-direction: column;
+    }
+    img {
+        width: 730px;
+        height: 530px;
+
+        @include mobile {
+            width: 345px;
+            height: 520px;
+            margin: 0 auto;
+        }
+    }
+    .info {
+        @include mobile {
+            padding: 0;
+        }
+
+        margin: 20px;
+        p {
+            width: 300px;
+            @include pad {
+                width: 400px;
+                margin: 0 auto;
+            }
+        }
+        .small {
+            font-size: 16px;
+        }
+    }
+}
+
+// suscribe
+.subscribe {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url("../image/index10.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .subscribe {
+        display: flex;
+
+        max-width: 1024px;
+        margin: 0 auto;
+        background: none;
+        @include pad {
+            align-items: center;
+        }
+        h4 {
+            color: $a-menu;
+            font-size: 32px;
+        }
+        .email {
+            display: flex;
+            width: 350px;
+            height: 60px;
+            margin: 20px 0;
+            input {
+                width: 65%;
+                font-size: 16px;
+                color: $a-menu;
+                border: 2px solid $primary;
+                padding: 10px;
+            }
+            input[type="button"] {
+                background: $primary;
+                color: #ffffff !important;
+                width: 35%;
+                font-size: 16px;
+                color: $a-menu;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//brand-name
+.brands {
+    background: $primary;
+    ul {
+        max-width: 900px;
+        margin: 5px auto;
+        display: flex;
+        height: 35px;
+        align-items: center;
+        li {
+            padding-right: 28px;
+            a {
+                color: #ffffff;
+            }
+        }
+        @include pad {
+            max-width: 700px;
+            margin: 10px auto;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+// products
+.products {
+    .cards {
+        max-width: 1024px;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include desktop-below {
+            max-width: 900px;
+        }
+        @include pad {
+            max-width: 700px;
+            margin: 10px auto;
+        }
+        @include pad {
+            max-width: 350px;
+            margin: 10px auto;
+        }
+        .card {
+            margin: 0px 10px;
+            img {
+                width: 230px;
+                height: 230px;
+                object-fit: cover;
+                @include mobile {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            .b {
+                object-position: bottom;
+            }
+            .t {
+                object-position: top;
+            }
+            .l {
+                object-position: left;
+            }
+            p {
+                font-size: 16px;
+                margin: 5px 0;
+                span {
+                    color: $a-menu;
+                    text-decoration: line-through;
+                }
+            }
+            div.link {
+                display: flex;
+                margin-bottom: 10px;
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .page {
+        margin-bottom: 30px;
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                padding: 0 10px;
+                a {
+                    color: #000000;
+                }
+                a:hover {
+                    color: $primary;
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
+}
+// login
+.login {
+    display: flex;
+    max-width: 1024px;
+    margin: 100px auto;
+    @include desktop-below {
+        max-width: 900px;
+    }
+    @include pad {
+        max-width: 700px;
+        margin: 220px auto;
+    }
+    @include mobile{
+        flex-direction: column;
+        margin: 40px auto;
+    }
+    .photo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 700px;
+            height: 700px;
+            object-fit: cover;
+            @include desktop-below {
+                width: 500px;
+                height: 500px;
+            }
+            @include pad {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    }
+    .log-in {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 20px;
+        h3 {
+            font-weight: 800;
+            font-size: 32px;
+        }
+        label {
+            font-size: 16px;
+            font-weight: 800;
+        }
+        input {
+            width: 340px;
+            height: 40px;
+            border: 1px solid $a-menu;
+            border-radius: 5px;
+            padding: 0 10px;
+            
+        }
+        .link {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            p {
+                a {
+                    color: $primary;
+                    font-weight: bolder;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                }
+            }
+            .button {
+                display: flex;
+                margin: 0;
+
+                a {
+                    width: 65px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    margin-left: 20px;
+                }
+                .signupbtn {
+                    border: 1px solid $primary;
+                    color: $primary;
+                }
+                .loginbtn {
+                    background: $primary;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
